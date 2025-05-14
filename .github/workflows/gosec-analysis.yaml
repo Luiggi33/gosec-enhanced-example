@@ -15,4 +15,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run gosec action
-        uses: Luiggi33/gosec-enhanced@v0.1.0
+        uses: Luiggi33/gosec-enhanced@v0.2.0
