@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"fmt"
+	"os"
 )
 
 func main() {
@@ -10,7 +11,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	q := fmt.Sprintf("SELECT * FROM foo")
+	q := fmt.Sprintf("SELECT * FROM foo where"+
+		"xname = '%s'", os.Args[1])
 	rows, err := db.Query(q)
 	if err != nil {
 		panic(err)
